@@ -376,7 +376,7 @@ html {
 
   .first-view {
     height: calc(100vh - 110px);
-    background-image: url(../images/index/bg-main-sp.png);
+    background-image: url(../images/index/bg-main-sp.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
