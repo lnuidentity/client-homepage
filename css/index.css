@@ -4,7 +4,7 @@
 .first-view {
   height: calc(100vh - 110px);
 
-  background-image: url(../images/index/bg-main.png);
+  background-image: url(../images/index/bg-main.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -109,11 +109,11 @@ html {
 }
 
 .link-button:hover {
-  background-color: #FFCA20;
+  background-color: #dc7157;
 }
 
 .service {
-  background-color: #FFF5F2;
+  background-color: #F6D4CC;
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -241,7 +241,7 @@ html {
 }
 
 .service-card {
-  background-color: #F6D4CC;
+  background-color: #f8ded8;
   border: 4px solid #F9B09E;
   border-radius: 20px;
   padding: 30px;
@@ -274,61 +274,8 @@ html {
   line-height: 1.9;
 }
 
-/* NEWS */
-.news {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.news h2 {
-  font-size: 28px;
-  margin-bottom: 25px;
-}
-
-.news-item {
-  display: flex;
-  gap: 30px;
-  padding: 18px 0;
-  border-bottom: 1px solid #dddddd;
-}
-
-.news-item time {
-  color: #777777;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.news-item p {
-  margin: 0;
-  font-size: 15px;
-}
-
-/* NEWS MORE */
-.news-more {
-  text-align: center;
-  margin-top: 35px;
-}
-
-.news-more a {
-  background-color: #f4dd64;
-  display: inline-block;
-  min-width: 180px;
-  line-height: 48px;
-  border-radius: 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-}
-
-.news-more a:hover {
-  background-color: #d8b500;
-}
-
-
-
-
 .link-button-process:hover {
-  background-color: #FFCA20;
+  background-color: #dc7157;
 }
 
 .fade-in {
@@ -698,12 +645,12 @@ html {
 .service-more a {
   display: inline-block;
 
-  padding: 8px 20px;
+  padding: 10px 20px;
 
-  border: 3px solid #f9896d;
+  border: 0px solid #F9B09E;
   border-radius: 30px;
 
-background-color: rgba(249, 176, 158, 0.6);
+background-color: #F9B09E;
 
   color: #633F35;
   font-size: 13px;
@@ -717,4 +664,280 @@ background-color: rgba(249, 176, 158, 0.6);
 /* マウスを乗せたとき */
 .service-more a:hover {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+/* =========================
+   NEWS お知らせ
+========================= */
+
+.news-section {
+    background-color: #FFF5F2;
+    padding: 90px 20px 100px;
+}
+
+.news-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 見出し */
+
+.news-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news-heading h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #633F35;
+    margin-bottom: 12px;
+}
+
+.news-heading p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #633F35;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.news-heading p::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #633F35;
+    margin: 18px auto 0;
+}
+
+/* お知らせ一覧 */
+
+.news-list {
+    border-top: 1px solid #E9C9C0;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 110px 100px 1fr 20px;
+    align-items: center;
+    gap: 15px;
+
+    padding: 22px 15px;
+
+    border-bottom: 1px solid #E9C9C0;
+
+    color: #633F35;
+    text-decoration: none;
+
+    transition: background-color 0.3s;
+}
+
+/* 日付 */
+
+.news-item time {
+    font-size: 14px;
+    color: #806D66;
+    white-space: nowrap;
+}
+
+/* カテゴリー */
+
+.news-category {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+
+    background-color: #F9B09E;
+    border-radius: 20px;
+
+    font-size: 12px;
+    color: #633F35;
+    white-space: nowrap;
+}
+
+/* タイトル */
+
+.news-title {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* 矢印 */
+
+.news-arrow {
+    font-size: 24px;
+    color: #D1806C;
+    text-align: right;
+    transition: transform 0.3s;
+}
+
+/* マウスを乗せたとき */
+
+.news-item:hover {
+    background-color: rgba(249, 176, 158, 0.15);
+}
+
+.news-item:hover .news-arrow {
+    transform: translateX(5px);
+}
+
+/* 一覧ボタン */
+
+.news-more {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.news-more a {
+    display: inline-block;
+    min-width: 240px;
+    padding: 17px 30px;
+
+    background-color: #F9B09E;
+    border-radius: 30px;
+
+    color:#633F35;
+    font-size: 15px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.news-more a:hover {
+    background-color: #F6D4CC;
+    color: #633F35;
+}
+
+.news-more a span {
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+/* スマホ */
+
+@media (max-width: 767px) {
+
+    .news-section {
+        padding: 65px 20px 75px;
+    }
+
+    .news-heading {
+        margin-bottom: 35px;
+    }
+
+    .news-heading h1 {
+        font-size: 25px;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr 20px;
+        gap: 8px;
+        padding: 18px 8px;
+    }
+
+    .news-item time {
+        grid-column: 1;
+        font-size: 12px;
+    }
+
+    .news-category {
+        grid-column: 1;
+        justify-self: start;
+        font-size: 11px;
+        padding: 4px 12px;
+    }
+
+    .news-title {
+        grid-column: 1;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .news-arrow {
+        grid-column: 2;
+        grid-row: 1 / 4;
+    }
+
+    .news-more {
+        margin-top: 70px;
+    }
+
+}
+
+
+
+/* Instagram 更新案内 */
+
+.news-instagram-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 500px;
+    margin: -20px auto 45px;
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+    background-color: #F9E5DE;
+    border-radius: 30px;
+
+    color: #633F35;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+
+animation: instagram-bg-blink 5s ease-in-out infinite;
+}
+
+.news-instagram-banner i {
+    font-size: 19px;
+    color: #A65E51;
+}
+
+.instagram-arrow {
+    color: #D1806C;
+    font-size: 17px;
+}
+
+/* 背景色だけを明滅 */
+@keyframes instagram-bg-blink {
+    0%, 100% {
+        background-color: #F9E5DE;
+    }
+    50% {
+        background-color: #F6D4CC;
+    }
+}
+
+.news-instagram-banner:hover {
+    animation-play-state: paused;
+    background-color: #F9B09E;
+}
+
+/* 動きを控えたい環境 */
+@media (prefers-reduced-motion: reduce) {
+    .news-instagram-banner {
+        animation: none;
+    }
+}
+
+/* 動きを控えたい環境では点滅を停止 */
+@media (prefers-reduced-motion: reduce) {
+    .news-instagram-banner {
+        animation: none;
+    }
+}
+
+/* スマホ */
+@media (max-width: 767px) {
+    .news-instagram-banner {
+        margin: -10px auto 35px;
+        padding: 11px 15px;
+        font-size: 13px;
+    }
 }
