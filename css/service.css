@@ -24,7 +24,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 30px));
+    transform: translate(-50%, -50%);
     z-index: 2;
     width: 90%;
     text-align: center;
@@ -39,13 +39,6 @@
     letter-spacing: 3px;
     margin-bottom: 25px;
     color: #F07835;
-}
-
-.about-hero-title h1 {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: clamp(30px, 3.5vw, 52px);
-    font-weight: 700;
-    line-height: 1.4;
 }
 
 
