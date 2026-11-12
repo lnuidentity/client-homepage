@@ -68,3 +68,31 @@
         padding: 16px 15px;
     }
 }
+
+/* =========================
+   求人ページ：スマートフォン
+========================= */
+
+@media (max-width: 800px) {
+
+    /* ファーストビューの高さ */
+    .about-hero {
+        height: 380px;
+    }
+
+    /* イラストの表示位置 */
+    .about-hero img {
+        object-position: center top;
+    }
+
+}
+
+
+/* 求人ページ：タイトル位置の調整 */
+@media (max-width: 800px) {
+
+    .about-hero-title {
+        top: 62%;
+    }
+
+}
