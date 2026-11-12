@@ -1,0 +1,335 @@
+
+/* ==========================
+   NEWS 一覧ページ
+========================== */
+
+.news-page {
+    background-color: #FFF5F2;
+    min-height: 70vh;
+    padding: 80px 0 120px;
+    color: #633F35;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/* 全体の幅 */
+.news-archive {
+    width: 90%;
+    max-width: 1235px;
+    margin: 0 auto;
+}
+
+/* ==========================
+   ページタイトル
+========================== */
+
+.news-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.news-heading-en {
+    display: block;
+    color: #F47732;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+.news-heading h1 {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================
+   Instagram案内
+========================== */
+
+.news-instagram {
+    max-width: 686px;
+    width: 90%;
+    margin: 0 auto 60px;
+}
+
+.news-instagram a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    min-height: 58px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    background-color: #F9E4DE;
+    border-radius: 50px;
+
+    color: #633F35;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease;
+}
+
+.news-instagram a:hover {
+    background-color: #F8D8CF;
+}
+
+.instagram-icon {
+    color: #B96C58;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.instagram-arrow {
+    color: #D1806C;
+    font-size: 23px;
+    margin-left: 5px;
+}
+
+/* ==========================
+   お知らせ一覧
+========================== */
+
+.news-list {
+    width: 100%;
+    border-top: 1px solid #EFC6B9;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 150px 138px 1fr;
+    align-items: center;
+    column-gap: 22px;
+
+    min-height: 97px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #EFC6B9;
+}
+
+/* 日付 */
+
+.news-date {
+    color: #85736C;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* カテゴリー */
+
+.news-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 30px;
+    padding: 3px 12px;
+    box-sizing: border-box;
+
+    background-color: #FFB09D;
+    border-radius: 30px;
+
+    color: #633F35;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* お知らせ本文 */
+
+.news-text {
+    margin: 0;
+    color: #633F35;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+/* ==========================
+   タブレット
+========================== */
+
+@media screen and (max-width: 900px) {
+
+    .news-item {
+        grid-template-columns: 125px 120px 1fr;
+        column-gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .news-date {
+        font-size: 16px;
+    }
+
+    .news-category {
+        font-size: 14px;
+    }
+
+    .news-text {
+        font-size: 16px;
+    }
+
+}
+
+/* ==========================
+   スマートフォン
+========================== */
+
+@media screen and (max-width: 600px) {
+
+    .news-page {
+        padding: 55px 0 80px;
+    }
+
+    .news-archive {
+        width: 90%;
+    }
+
+    .news-heading {
+        margin-bottom: 35px;
+    }
+
+    .news-heading-en {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .news-heading h1 {
+        font-size: 28px;
+    }
+
+    /* Instagram */
+
+    .news-instagram {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .news-instagram a {
+        min-height: 50px;
+        gap: 10px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .instagram-icon {
+        font-size: 21px;
+    }
+
+    .instagram-arrow {
+        font-size: 19px;
+    }
+
+    /* 一覧 */
+
+    .news-item {
+        grid-template-columns: auto 1fr;
+        column-gap: 12px;
+        row-gap: 10px;
+
+        min-height: auto;
+        padding: 22px 5px;
+    }
+
+    .news-date {
+        font-size: 14px;
+    }
+
+    .news-category {
+        justify-self: start;
+        min-width: 100px;
+        min-height: 26px;
+        font-size: 12px;
+    }
+
+    .news-text {
+        grid-column: 1 / -1;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+
+/* ==========================
+   NEWS ページ送り
+========================== */
+
+.news-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 65px;
+}
+
+.news-pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #633F35;
+    transition: 0.3s ease;
+}
+
+.page-number {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.page-number:hover {
+    background-color: #F9E4DE;
+}
+
+.page-number.active {
+    background-color: #FFB09D;
+}
+
+.page-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 28px;
+    color: #D1806C !important;
+}
+
+.page-arrow.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.page-dots {
+    color: #85736C;
+    font-size: 16px;
+}
+
+/* スマホ */
+
+@media screen and (max-width: 600px) {
+
+    .news-pagination {
+        gap: 7px;
+        margin-top: 45px;
+    }
+
+    .page-number,
+    .page-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .page-arrow {
+        font-size: 24px;
+    }
+
+}
