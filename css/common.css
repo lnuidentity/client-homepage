@@ -748,13 +748,13 @@ width: 60px;
 
   /* 求人情報 */
   .header-action.recruit {
-    background-color: #633F35;
-    color: #ffffff;
+    background-color: #F6D4CC;
+    color:#633F35;
   }
 
   /* お問い合わせ */
   .header-action.contact {
-    background-color: #FFCC20;
+    background-color: #F9B09E;
     color: #633F35;
   }
 

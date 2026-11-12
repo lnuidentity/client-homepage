@@ -15,7 +15,7 @@
 <!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"></head>
 
 <body>
 
@@ -101,28 +101,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         </div>
     </div>
     
-        <div class="concept">
 
-            <section>
+<div class="concept">
 
-                <h1 class="fade-in">私たちについて</h1>
-                <p class="fade-in">私たちは、介護を通じて、
-誰もが住み慣れたわが家で、
-自分らしく安心して暮らせるように、みなさまの毎日を支えたいと思っています。<br>
-「助け合い」から始まった私たちの想いを、
-一人ひとりに寄り添う支援とともに、
-これからも広げていきます。
-                </p>
-                <div class="link-button-area fade-in">
-                    <a class="link-button fade-in" href="./about.html">詳しくはこちら</a>
-                </div>
-            </section>
+    <section class="concept-inner watercolor-bg">
+
+        <p class="section-en fade-in">ABOUT</p>
+
+        <h1 class="fade-in">私たちについて</h1>
+
+        <p class="fade-in">
+            私たちは、介護を通じて、
+            誰もが住み慣れたわが家で、
+            自分らしく安心して暮らせるように、みなさまの毎日を支えたいと思っています。<br>
+            「助け合い」から始まった私たちの想いを、
+            一人ひとりに寄り添う支援とともに、
+            これからも広げていきます。
+        </p>
+
+        <div class="link-button-area fade-in">
+            <a class="link-button fade-in" href="./about.html">詳しくはこちら</a>
         </div>
 
+    </section>
+
+</div>
+
+
         <div class="service">
-            <h1 class="fade-in">サービスの紹介</h1>
-            <p class="yomi fade-in">Service</p>
-            <h2 class="fade-in"></h2>
+<p class="section-en fade-in">SERVICE</p>
+<h1 class="fade-in">サービスの紹介</h1>
 
             <ul class="service-list fade-in">
                 <li> 
@@ -212,8 +220,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <div class="news-inner">
 
 <div class="news-heading">
-    <h1>お知らせ</h1>
-    <p>NEWS</p>
+    <p class="section-en fade-in">NEWS</p>
+    <h1 class="fade-in">お知らせ</h1>
 </div>
 
 <!-- Instagram案内 -->
@@ -333,6 +341,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <!-- footerここまで -->
     <script src="./js/fade-in.js"></script>
     <script src="./js/ai-scroll.js"></script>
+
+<svg class="watercolor-filter"
+     xmlns="http://www.w3.org/2000/svg">
+    <filter id="watercolor">
+        <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.025"
+            numOctaves="3"
+            seed="8"
+            result="noise"
+        />
+        <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="18"
+        />
+    </filter>
+</svg>
+
 </body>
 
 </html>
