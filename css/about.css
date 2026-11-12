@@ -294,8 +294,6 @@
         padding-top: 5px;
     }
 }
-
-
 /* =========================
    フェードインアニメーション
 ========================= */
@@ -311,11 +309,12 @@
     transform: translateY(0);
 }
 
-/* タイトルの中央配置を維持 */
+/* ページ上部のタイトル専用 */
 .about-hero-title.fade-in {
     transform: translate(-50%, calc(-50% + 20px));
 }
 
 .about-hero-title.fade-in.show {
+    opacity: 1;
     transform: translate(-50%, -50%);
 }

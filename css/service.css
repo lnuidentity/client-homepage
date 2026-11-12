@@ -32,6 +32,7 @@
     color: #633F35;
 }
 
+/* 英語タイトル */
 .about-hero-en {
     display: block;
     font-family: 'Montserrat', sans-serif;
@@ -41,8 +42,6 @@
     margin-bottom: 25px;
     color: #F07835;
 }
-
-
 
 /* 日本語タイトル */
 .about-hero-title h1 {
@@ -66,7 +65,6 @@
 }
 
 /* 導入文 */
-
 .service-intro {
     max-width: 850px;
     margin: 0 auto 80px;
@@ -88,7 +86,6 @@
 }
 
 /* 左側イラスト */
-
 .service-detail-image {
     width: 32%;
     flex-shrink: 0;
@@ -103,7 +100,6 @@
 }
 
 /* 右側文章 */
-
 .service-detail-content {
     flex: 1;
     min-width: 0;
@@ -127,7 +123,10 @@
     margin-bottom: 15px;
 }
 
-/* サービス区分 */
+
+/* =========================
+   サービス区分
+========================= */
 
 .service-badge {
     display: inline-flex;
@@ -160,7 +159,9 @@
 }
 
 
-/* 説明文 */
+/* =========================
+   説明文
+========================= */
 
 .service-description {
     font-size: 15px;
@@ -225,11 +226,6 @@
 }
 
 
-
-/* =========================
-   電話・お問い合わせ
-========================= */
-
 /* =========================
    電話・お問い合わせ
 ========================= */
@@ -240,14 +236,12 @@
     box-sizing: border-box;
     margin-top: 40px;
     padding: 25px 30px;
-
     background-color: #FFFFFF;
     border: 1.5px solid #EBCFC5;
     border-radius: 18px;
 }
 
 /* 見出し・受付時間 */
-
 .service-contact-heading {
     display: flex;
     align-items: center;
@@ -271,22 +265,18 @@
 }
 
 /* 電話番号 */
-
 .service-contact a {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-
     width: 100%;
     margin: 0;
     padding: 0;
-
     font-family: 'Montserrat', sans-serif;
     font-size: 27px;
     line-height: 1.5;
     font-weight: 700;
-
     color: #D1806C;
     text-decoration: none;
 }
@@ -297,86 +287,12 @@
 
 
 /* =========================
-   スマートフォン
+   スマートフォン対応
 ========================= */
 
 @media (max-width: 800px) {
 
-    .service-contact {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 30px;
-        padding: 20px;
-    }
-
-    .service-contact-heading {
-        gap: 6px;
-        margin-bottom: 15px;
-    }
-
-    .service-contact-heading p {
-        font-size: 14px;
-    }
-
-    .service-contact-heading span {
-        font-size: 11px;
-    }
-
-    .service-contact a {
-        font-size: clamp(20px, 6vw, 26px);
-        gap: 10px;
-    }
-
-    .service-contact a i {
-        font-size: 20px;
-    }
-
-}
-
-
-/* =========================
-   スマートフォン
-========================= */
-
-@media (max-width: 800px) {
-
-    .service-contact {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 30px;
-        padding: 20px;
-    }
-
-    .service-contact-heading {
-        gap: 6px;
-        margin-bottom: 15px;
-    }
-
-    .service-contact-heading p {
-        font-size: 14px;
-    }
-
-    .service-contact-heading span {
-        font-size: 11px;
-    }
-
-    .service-contact a {
-        font-size: clamp(20px, 6vw, 26px);
-        gap: 10px;
-    }
-
-    .service-contact a i {
-        font-size: 20px;
-    }
-
-}
-
-/* =========================
-   スマートフォン
-========================= */
-
-@media (max-width: 800px) {
-
+    /* ページ上部 */
     .about-hero {
         height: 260px;
     }
@@ -384,7 +300,6 @@
     .about-hero-title {
         left: 50%;
         top: 55%;
-        transform: translate(-50%, -50%);
     }
 
     .about-hero-en {
@@ -396,6 +311,7 @@
         font-size: clamp(28px, 7vw, 40px);
     }
 
+    /* サービス全体 */
     .service-page {
         width: 90%;
         padding: 55px 0 80px;
@@ -407,6 +323,7 @@
         margin-bottom: 45px;
     }
 
+    /* 各サービス */
     .service-detail {
         flex-direction: column;
         gap: 25px;
@@ -433,6 +350,7 @@
         line-height: 2.2;
     }
 
+    /* 時間・料金 */
     .service-info > div {
         font-size: 13px;
     }
@@ -441,24 +359,38 @@
         width: 85px;
     }
 
-@media (max-width: 800px) {
-
-
-
+    /* 電話・お問い合わせ */
     .service-contact {
+        width: 100%;
         max-width: 100%;
-        padding: 20px;
         margin-top: 30px;
+        padding: 20px;
+    }
+
+    .service-contact-heading {
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .service-contact-heading p {
+        font-size: 14px;
+    }
+
+    .service-contact-heading span {
+        font-size: 11px;
     }
 
     .service-contact a {
-        font-size: clamp(21px, 6vw, 26px);
+        font-size: clamp(20px, 6vw, 26px);
+        gap: 10px;
     }
 
+    .service-contact a i {
+        font-size: 20px;
+    }
+}
 
 
-}
-}
 /* =========================
    フェードインアニメーション
 ========================= */
