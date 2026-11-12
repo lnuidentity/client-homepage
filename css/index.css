@@ -1097,7 +1097,6 @@ animation: instagram-bg-blink 5s ease-in-out infinite;
             transparent 40%
         );
 
-    filter: url(#watercolor);
     opacity: 0.9;
 }
 
@@ -1149,6 +1148,5 @@ animation: instagram-bg-blink 5s ease-in-out infinite;
             transparent 40%
         );
 
-    filter: url(#watercolor);
     opacity: 0.65;
 }
