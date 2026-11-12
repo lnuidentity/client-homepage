@@ -127,18 +127,9 @@
     font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 25px;
+    color:#F07835;
 }
 
-/* 英語タイトルの丸 */
-.about-hero-en::before {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #F9B09E;
-    border-radius: 50%;
-    margin-right: 15px;
-}
 
 /* 日本語タイトル */
 .about-hero-title h1 {
@@ -164,7 +155,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: 2px;
-    color: #d1806c;
+    color: #F07835;
     margin-bottom: 10px;
 }
 
@@ -304,3 +295,4 @@
         padding-top: 5px;
     }
 }
+
