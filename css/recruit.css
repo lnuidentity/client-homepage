@@ -73,26 +73,16 @@
    求人ページ：スマートフォン
 ========================= */
 
+/* 求人ページ：スマートフォンでのヒーロー表示調整 */
 @media (max-width: 800px) {
 
-    /* ファーストビューの高さ */
-    .about-hero {
-        height: 380px;
-    }
-
-    /* イラストの表示位置 */
+    /* イラスト位置 */
     .about-hero img {
         object-position: center top;
     }
 
-}
-
-
-/* 求人ページ：タイトル位置の調整 */
-@media (max-width: 800px) {
-
+    /* タイトル位置 */
     .about-hero-title {
         top: 62%;
     }
-
 }

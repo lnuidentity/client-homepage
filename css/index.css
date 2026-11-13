@@ -1,681 +1,400 @@
 @charset "utf-8";
 
+/* ==================================================
+   TOPページ
+   - ファーストビュー
+   - ABOUT紹介
+   - SERVICE紹介
+   - NEWS
+   - あいちゃん
+================================================== */
 
-.first-view {
-  height: calc(100vh - 110px);
-
-  background-image: url(../images/index/bg-main.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  display: flex;
-  align-items: center;
-
-  background-color: #FFF5F2;
+html {
+    scroll-behavior: smooth;
 }
 
-/* ファーストビュー背景を左右にゆっくり動かす */
+/* ==================================================
+   1. ファーストビュー
+================================================== */
+
 .first-view {
-  background-position: 50% center;
-  animation: bg-slide 20s linear infinite alternate;
+    height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+
+    background-color: #FFF5F2;
+    background-image: url(../images/index/bg-main.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% center;
+    background-size: cover;
+
+    animation: bg-slide 20s linear infinite alternate;
 }
 
 @keyframes bg-slide {
-  from {
-    background-position: 100% center;
-  }
-  to {
-    background-position: 0% center;
+    from {
+        background-position: 100% center;
+    }
+
+    to {
+        background-position: 0% center;
     }
 }
 
 .first-view-text {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-bottom: 300px;
-  color: #633F35;
-
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-bottom: 300px;
+    color: #633F35;
 }
 
 .first-view-text h1 {
-  font-size: 50px;
-  line-height: 72px;
-  font-weight: 400;
+    font-size: 50px;
+    line-height: 72px;
+    font-weight: 400;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: text-fade-up 1.5s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .first-view-text h2 {
-  font-size: 28px;
-  line-height: 40px;
-  font-weight: 400;
-  margin-top: 20px;
-transform: translateX(2px);
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 400;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: text-fade-up 1.5s ease forwards;
+    animation-delay: 1.2s;
 }
 
 .first-view-text p {
-  font-size: 20px;
-  line-height: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 40px;
     font-weight: 400;
-
-  margin-top: 20px;
-transform: translateX(2px);
+    transform: translateX(2px);
 }
 
-html {
-  scroll-behavior: smooth;
+/* ファーストビューの文字表示 */
+@keyframes text-fade-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+
+/* ==================================================
+   2. ABOUT紹介
+================================================== */
 
 .concept {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 120px;
-  padding-bottom: 100px;
-  line-height: 1.5;
-  background-color: #F9B09E;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.5;
+    background-color: #F9B09E;
 }
 
-.concept h1 {
-  font-size: 25px;
- font-weight:500;
-  text-align: center;
-  margin-bottom: 50px;
+/* 水彩背景を入れる範囲 */
+.concept-inner {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 120px 20px 100px;
+    text-align: center;
+    background-color: #F9B09E;
 }
 
-.concept p {
-  margin-top: 30px;
-    font-weight: normal;
-  line-height: 2;
-  margin-bottom: 55px;
+/* 水彩の色ムラ */
+.concept-inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(255, 245, 242, 0.45),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 75% 15%,
+            rgba(209, 128, 108, 0.20),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 40% 55%,
+            rgba(255, 245, 242, 0.30),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 85% 85%,
+            rgba(255, 202, 32, 0.13),
+            transparent 40%
+        );
+    opacity: 0.9;
 }
 
-  .conceptmessage {
-        max-width: 1000px;
+.conceptmessage {
+    max-width: 1000px;
     width: 90%;
     margin: 50px auto 0;
     font-size: 19px;
     line-height: 2;
     text-align: center;
-  }
+}
 
 .link-button-area {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin: 10px 0;
+    text-align: center;
 }
 
 .link-button {
-  background-color: #d1806c;
-  display: inline-block;
-  min-width: 180px;
-  line-height: 48px;
-  border-radius: 24px;
-  font-size: 14px;
-  color: #ffffff;
+    display: inline-block;
+    min-width: 180px;
+    line-height: 48px;
+    border-radius: 24px;
+    background-color: #D1806C;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 .link-button:hover {
-  background-color: #dc7157;
+    background-color: #DC7157;
 }
+
+
+/* ==================================================
+   3. SERVICE紹介
+================================================== */
 
 .service {
-  background-color: #F6D4CC;
-  padding-top: 80px;
-  padding-bottom: 80px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    background-color: #F6D4CC;
 }
 
-.service h1 {
-  font-size: 28px;
-  font-weight: 500;
-  text-align: center;
-}
-
-.service .yomi {
-  font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.service .yomi::after {
-  content: '';
-  display: block;
-  width: 36px;
-  height: 3px;
-  background-color: #633F35;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 60px;
-}
-
-.service h2 {
-  font-size: 18px;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.last-memo {
-  font-size: 18px;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 40px;
+/* 薄い水彩の色ムラ */
+.service::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(255, 245, 242, 0.30),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 80% 15%,
+            rgba(249, 176, 158, 0.16),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 45% 65%,
+            rgba(255, 245, 242, 0.22),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 90% 85%,
+            rgba(255, 202, 32, 0.08),
+            transparent 40%
+        );
+    opacity: 0.65;
 }
 
 .service-list {
-  width: 930px;
-  max-width: 90%;
-  margin-top: 60px;
-  margin-left: auto;
-  margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 70px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
-  row-gap: 70px;
+    width: 930px;
+    max-width: 90%;
+    margin: 60px auto 0;
 }
 
 .service-list dl {
-  margin-top: 45px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 45px;
 }
 
 .service-list dt {
-  font-weight: bold;
-  font-size: 16px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .service-list dd {
-  font-size: 14px;
-  line-height: 1.9;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-weight: normal;
-  text-align: left;
-  overflow-wrap: normal;
-}
-
-/* サービス見出しとラベル */
-.service-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* 自費ラベル */
-.service-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  background-color: #FFF5F2;
-  color: #633F35;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  padding: 5px 12px;
-  border-radius: 20px;
-
-  margin-top: 15px;
-    width: fit-content;
-  align-self: flex-start;
-}
-
-/* ラベル内の小さな丸 */
-.badge-dot {
-  display: inline-block;
-
-  width: 7px;
-  height: 7px;
-
-  background-color: #D1826D;
-  border-radius: 50%;
-}
-
-/* ラベル内の小さな丸 */
-.badge-dot2{
-  display: inline-block;
-
-  width: 7px;
-  height: 7px;
-
-  background-color: #FFCA20;
-  border-radius: 50%;
-}
-
-.service-card {
-  background-color: #f8ded8;
-  border: 1px solid #F9B09E;
-  border-radius: 20px;
-  padding: 30px;
-  width: 100%;
-}
-
-.simple-line hr {
-  border: none;
-  border-top: 4px solid #633F35;
-  margin: 40px 0;
-}
-
-.service-list .target {
-  margin-top: 30px;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-.service-list .memo {
-  margin-top: 10px;
-  font-size: 13px;
-  padding-left: 1px;
-}
-
-.underline-text {
-  text-decoration: underline;
-  text-decoration-color: #633F35;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  line-height: 1.9;
-}
-
-.link-button-process:hover {
-  background-color: #dc7157;
-}
-
-/* ファーストビューのメイン文字 */
-.first-view-text h1 {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: text-fade-up 1.5s ease forwards;
-  animation-delay: 0.5s;
-}
-
-/* ファーストビューの副題 */
-.first-view-text h2 {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: text-fade-up 1.5s ease forwards;
-  animation-delay: 1.2s;
-}
-
-/* 下からふわっと表示 */
-@keyframes text-fade-up {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 800px) {
-
-
-  .first-view {
-    height: calc(100vh - 110px);
-    background-image: url(../images/index/bg-main-sp.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .first-view-text {
-    padding-top: 60px;
-    padding-left: 20px;
-    width: 100%;
-  }
-
-  .first-view-text h1 {
-    font-size: 25px;
-    line-height: 48px;
-  }
-
-  .first-view-text h2 {
-  font-size: 20px;
-  line-height: 40px;
-  font-weight: 400;
-  margin-top: 20px;
-transform: translateX(2px);
-}
-
-  .first-view-text p {
-    font-size: 14px;
-    margin-top: 15px;
-  }
-
-  .concept {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .concept h1 {
-    text-align: center;
-  }
-
-  .concept h2 {
-    text-align: center;
-  }
-
-  .concept p {
-    text-align: center;
-  }
-
-  .service {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .service h2 {
-    line-height: 30px;
-    font-size: 17px;
-  }
-
-  .case {
-    display: block;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .case h1 {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-
-  .homecase {
-    display: block;
-    width: 500px;
-    margin-top: 5px;
-  }
-
-  .homecase-text h2 {
-    display: block;
-    text-align: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  .reverse .homecase-text {
-    margin-left: 40px;
-    margin-right: 0;
-    margin-top: 5px;
-  }
-
-  .homecase-text {
-    margin-right: 0;
-    display: block;
-  }
-
-  .homecase img {
-    width: 100%;
-    height: auto;
-    margin-top: 25px;
-  }
-
-  .homecase p {
-    text-align: center;
-  }
-
-  .Process {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .Process h2 {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .Process-list {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .Process-list li {
-    width: 220px;
-    margin-left: 30px;
-  }
-
-}
-
-/* PC：サービスカードの高さを揃える */
-@media (min-width: 768px) {
-  .service-list {
-    align-items: stretch;
-  }
-
-  .service-list li {
-    height: 100%;
-  }
-
-  .service-card {
-    height: 100%;
-    box-sizing: border-box;
-  }
-}
-
-/* スマホ：サービスカードの表示調整 */
-@media (max-width: 767px) {
-
-  /* サービスカードを縦に1列で並べる */
-  .service-list {
-    width: 100%;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  /* カードの幅を画面に合わせる */
-  .service-list li {
-    width: 100%;
-    height: auto;
-  }
-
-  /* カード内の余白を調整 */
-  .service-card {
-    width: 100%;
-    height: auto;
-    padding: 25px;
-    box-sizing: border-box;
-  }
-
-/* スマホ：サービスカードのイラスト */
-.service-card img {
-  display: block;
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  margin: 0 auto 25px;
-}
-
-  /* サービス名 */
-  .service-list dt {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  /* サービス説明文 */
-  .service-list dd {
-    font-size: 14px;
-    line-height: 1.8;
+    flex: 1;
     margin-top: 20px;
-  }
-
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: normal;
+    text-align: left;
+    overflow-wrap: normal;
 }
 
-/* スマホ：ファーストビューの位置を固定 */
-@media (max-width: 800px) {
-
-  .first-view {
-    transform: none;
-    margin-top: 0;
-  }
-
-  .first-view-text {
-    transform: none;
-  }
-
+/* サービス名とラベル */
+.service-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* スマホ：ファーストビューの高さを安定させる */
-@media (max-width: 800px) {
+/* サービス区分ラベル */
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 6px;
 
-  .first-view {
-    height: 100svh;
-    min-height: 500px;
-  }
+    width: fit-content;
+    margin-top: 15px;
+    padding: 5px 12px;
 
+    border-radius: 20px;
+    background-color: #FFF5F2;
+    color: #633F35;
+    font-size: 12px;
+    font-weight: 700;
 }
 
-/* キャラクターの浮遊 */
-/* キャラクターの位置 */
-.ai-character-wrap {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-
-  width: 150px;
-  z-index: 10;
-
-  pointer-events: none;
+/* ラベル内の丸 */
+.badge-dot,
+.badge-dot2 {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
 }
 
-/* キャラクター画像 */
-.ai-character {
-  display: block;
-  width: 100%;
-  height: auto;
-
-  animation: ai-float 3s ease-in-out infinite;
+.badge-dot {
+    background-color: #D1826D;
 }
 
-/* ふわふわ浮かぶ動き */
-@keyframes ai-float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+.badge-dot2 {
+    background-color: #FFCA20;
 }
 
-/* ふわふわ浮かぶ動き */
-@keyframes ai-float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* スマホで横にはみ出さないようにする */
-@media (max-width: 800px) {
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .first-view {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-/* スマホ：キャラクターを少し小さくする */
-@media (max-width: 800px) {
-  .ai-character-wrap {
-    width: 100px;
-    right: 15px;
-    bottom: 15px;
-  }
-}
-
-/* サービスカード内のレイアウト */
+/* サービスカード */
 .service-card {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 30px;
+
+    border: 1px solid #F9B09E;
+    border-radius: 20px;
+    background-color: #F8DED8;
 }
 
-/* 説明文の高さをそろえる */
-.service-card dl {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-/* 説明文 */
+/* カード内の説明文 */
 .service-card dd {
-  flex: 1;
+    flex: 1;
 }
 
 /* 詳細はこちらボタン */
 .service-more {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 25px;
 }
 
-/* 詳細はこちらボタン */
-.service-more {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 25px;
-}
-
-/* ボタン本体 */
 .service-more a {
-  display: inline-block;
+    display: inline-block;
+    padding: 10px 20px;
 
-  padding: 10px 20px;
+    border: 0 solid #F9B09E;
+    border-radius: 30px;
+    background-color: #F9B09E;
 
-  border: 0px solid #F9B09E;
-  border-radius: 30px;
+    color: #633F35;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
 
-background-color: #F9B09E;
-
-  color: #633F35;
-  font-size: 13px;
-  font-weight: bold;
-
-  text-decoration: none;
-
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
-/* マウスを乗せたとき */
 .service-more a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 説明文の下線 */
+.underline-text {
+    line-height: 1.9;
+    text-decoration: underline;
+    text-decoration-color: #633F35;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
 }
 
 
+/* ==================================================
+   4. あいちゃん
+================================================== */
 
-/* =========================
-   NEWS お知らせ
-========================= */
+.ai-character-wrap {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 10;
+
+    width: 150px;
+    pointer-events: none;
+}
+
+.ai-character {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation: ai-float 3s ease-in-out infinite;
+}
+
+@keyframes ai-float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ==================================================
+   5. NEWS
+================================================== */
 
 .news-section {
-    background-color: #FFF5F2;
     padding: 90px 20px 100px;
+    background-color: #FFF5F2;
 }
 
 .news-inner {
@@ -683,38 +402,10 @@ background-color: #F9B09E;
     margin: 0 auto;
 }
 
-/* 見出し */
-
 .news-heading {
-    text-align: center;
     margin-bottom: 50px;
+    text-align: center;
 }
-
-.news-heading h1 {
-    font-size: 28px;
-    font-weight: 500;
-    color: #633F35;
-    margin-bottom: 12px;
-}
-
-.news-heading p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    color: #633F35;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.news-heading p::after {
-    content: '';
-    display: block;
-    width: 36px;
-    height: 3px;
-    background-color: #633F35;
-    margin: 18px auto 0;
-}
-
-/* お知らせ一覧 */
 
 .news-list {
     border-top: 1px solid #E9C9C0;
@@ -727,55 +418,42 @@ background-color: #F9B09E;
     gap: 15px;
 
     padding: 22px 15px;
-
     border-bottom: 1px solid #E9C9C0;
 
     color: #633F35;
     text-decoration: none;
-
     transition: background-color 0.3s;
 }
 
-/* 日付 */
-
 .news-item time {
-    font-size: 14px;
     color: #806D66;
+    font-size: 14px;
     white-space: nowrap;
 }
-
-/* カテゴリー */
 
 .news-category {
     display: inline-block;
-    text-align: center;
     padding: 5px 10px;
-
-    background-color: #F9B09E;
     border-radius: 20px;
+    background-color: #F9B09E;
 
-    font-size: 12px;
     color: #633F35;
+    font-size: 12px;
+    text-align: center;
     white-space: nowrap;
 }
-
-/* タイトル */
 
 .news-title {
     font-size: 15px;
     line-height: 1.7;
 }
 
-/* 矢印 */
-
 .news-arrow {
-    font-size: 24px;
     color: #D1806C;
+    font-size: 24px;
     text-align: right;
     transition: transform 0.3s;
 }
-
-/* マウスを乗せたとき */
 
 .news-item:hover {
     background-color: rgba(249, 176, 158, 0.15);
@@ -785,25 +463,22 @@ background-color: #F9B09E;
     transform: translateX(5px);
 }
 
-/* 一覧ボタン */
-
+/* お知らせ一覧ボタン */
 .news-more {
-    text-align: center;
     margin-top: 45px;
+    text-align: center;
 }
 
 .news-more a {
     display: inline-block;
     min-width: 240px;
     padding: 17px 30px;
-
-    background-color: #F9B09E;
     border-radius: 30px;
+    background-color: #F9B09E;
 
-    color:#633F35;
+    color: #633F35;
     font-size: 15px;
     text-decoration: none;
-
     transition: 0.3s;
 }
 
@@ -813,14 +488,221 @@ background-color: #F9B09E;
 }
 
 .news-more a span {
-    font-size: 10px;
     margin-left: 8px;
+    font-size: 10px;
 }
 
-/* スマホ */
+/* Instagram更新案内 */
+.news-instagram-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 
+    width: 100%;
+    max-width: 500px;
+    margin: -20px auto 45px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+
+    border-radius: 30px;
+    background-color: #F9E5DE;
+
+    color: #633F35;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+
+    animation: instagram-bg-blink 5s ease-in-out infinite;
+}
+
+.news-instagram-banner i {
+    color: #A65E51;
+    font-size: 19px;
+}
+
+.instagram-arrow {
+    color: #D1806C;
+    font-size: 17px;
+}
+
+@keyframes instagram-bg-blink {
+    0%,
+    100% {
+        background-color: #F9E5DE;
+    }
+
+    50% {
+        background-color: #F6D4CC;
+    }
+}
+
+.news-instagram-banner:hover {
+    animation-play-state: paused;
+    background-color: #F9B09E;
+}
+
+
+/* ==================================================
+   6. セクション見出し
+================================================== */
+
+/* ABOUT・SERVICE・NEWSの英字見出し */
+.section-en {
+    margin: 0 0 8px;
+
+    color: #F07835;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* 日本語見出し */
+.concept h1,
+.service h1,
+.news-heading h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: #633F35;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* ==================================================
+   7. レスポンシブ
+================================================== */
+
+/* タブレット・スマートフォン */
+@media (max-width: 800px) {
+    .first-view {
+        height: 100svh;
+        min-height: 500px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        align-items: flex-start;
+        margin-top: 0;
+        transform: none;
+
+        background-image: url(../images/index/bg-main-sp.jpg);
+        background-position: center top;
+    }
+
+    .first-view-text {
+        width: 100%;
+        padding-top: 60px;
+        padding-left: 20px;
+        transform: none;
+    }
+
+    .first-view-text h1 {
+        font-size: 25px;
+        line-height: 48px;
+    }
+
+    .first-view-text h2 {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 400;
+    }
+
+    .first-view-text p {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .concept-inner {
+        padding: 80px 20px 70px;
+    }
+
+    .service {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .ai-character-wrap {
+        right: 15px;
+        bottom: 15px;
+        width: 100px;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+/* PC：サービスカードの高さを揃える */
+@media (min-width: 768px) {
+    .service-list {
+        align-items: stretch;
+    }
+
+    .service-list li {
+        height: 100%;
+    }
+
+    .service-card {
+        height: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* スマートフォン：サービスカード */
 @media (max-width: 767px) {
+    .service-list {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 40px;
+    }
 
+    .service-list li {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-card {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .service-card img {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin: 0 auto 25px;
+    }
+
+    .service-list dt {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .service-list dd {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* スマートフォン：NEWS */
+@media (max-width: 767px) {
     .news-section {
         padding: 65px 20px 75px;
     }
@@ -847,8 +729,8 @@ background-color: #F9B09E;
     .news-category {
         grid-column: 1;
         justify-self: start;
-        font-size: 11px;
         padding: 4px 12px;
+        font-size: 11px;
     }
 
     .news-title {
@@ -866,178 +748,14 @@ background-color: #F9B09E;
         margin-top: 70px;
     }
 
-}
-
-
-
-/* Instagram 更新案内 */
-
-.news-instagram-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-    width: 100%;
-    max-width: 500px;
-    margin: -20px auto 45px;
-    padding: 12px 20px;
-
-    box-sizing: border-box;
-    background-color: #F9E5DE;
-    border-radius: 30px;
-
-    color: #633F35;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-
-animation: instagram-bg-blink 5s ease-in-out infinite;
-}
-
-.news-instagram-banner i {
-    font-size: 19px;
-    color: #A65E51;
-}
-
-.instagram-arrow {
-    color: #D1806C;
-    font-size: 17px;
-}
-
-/* 背景色だけを明滅 */
-@keyframes instagram-bg-blink {
-    0%, 100% {
-        background-color: #F9E5DE;
-    }
-    50% {
-        background-color: #F6D4CC;
-    }
-}
-
-.news-instagram-banner:hover {
-    animation-play-state: paused;
-    background-color: #F9B09E;
-}
-
-/* 動きを控えたい環境 */
-@media (prefers-reduced-motion: reduce) {
-    .news-instagram-banner {
-        animation: none;
-    }
-}
-
-/* 動きを控えたい環境では点滅を停止 */
-@media (prefers-reduced-motion: reduce) {
-    .news-instagram-banner {
-        animation: none;
-    }
-}
-
-/* スマホ */
-@media (max-width: 767px) {
     .news-instagram-banner {
         margin: -10px auto 35px;
         padding: 11px 15px;
         font-size: 13px;
     }
-}
 
-/* =========================
-   セクション英字見出し
-   フッターとデザイン統一
-========================= */
-
-.section-en {
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #F07835;
-    text-align: center;
-    margin: 0 0 10px;
-}
-
-/* ABOUT */
-.concept .section-en {
-    margin-bottom: 10px;
-}
-
-/* SERVICE */
-.service .section-en {
-    margin-bottom: 10px;
-}
-
-/* NEWS */
-.news-heading .section-en {
-    margin-bottom: 10px;
-}
-
-/* 日本語タイトルとの間隔 */
-.concept h1,
-.service h1,
-.news-heading h1 {
-    margin-top: 0;
-}
-
-/* NEWS既存の英字用ラインを無効化 */
-.news-heading p::after {
-    display: none;
-}
-
-/* スマホ */
-@media (max-width: 767px) {
     .section-en {
         font-size: 12px;
-    }
-}
-
-/* =========================
-   トップページ見出しデザイン統一
-========================= */
-
-/* 英字共通 */
-.concept p.section-en,
-.service p.section-en,
-.news-heading p.section-en {
-    font-family: "Noto Sans JP", sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    letter-spacing: 1px !important;
-    color: #F07835 !important;
-
-    text-align: center;
-    line-height: 1.5;
-    margin: 0 0 8px !important;
-}
-
-/* 日本語タイトル共通 */
-.concept h1,
-.service h1,
-.news-heading h1 {
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    color: #633F35;
-
-    text-align: center;
-    line-height: 1.5;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* NEWSの既存装飾を解除 */
-.news-heading p.section-en::after {
-    display: none;
-}
-
-/* スマホ */
-@media (max-width: 767px) {
-
-    .concept p.section-en,
-    .service p.section-en,
-    .news-heading p.section-en {
-        font-size: 12px !important;
     }
 
     .concept h1,
@@ -1045,109 +763,11 @@ animation: instagram-bg-blink 5s ease-in-out infinite;
     .news-heading h1 {
         font-size: 25px;
     }
-
 }
 
-
-/* =========================
-   ABOUT 水彩風背景
-========================= */
-
-.concept {
-    background-color: #F9B09E;
-    padding: 0;
-}
-
-/* 水彩を入れる範囲 */
-.concept-inner {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    padding: 120px 20px 100px;
-    text-align: center;
-    background-color: #F9B09E;
-}
-
-/* 水彩の色ムラ */
-.concept-inner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            ellipse at 15% 20%,
-            rgba(255, 245, 242, 0.45),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 75% 15%,
-            rgba(209, 128, 108, 0.20),
-            transparent 40%
-        ),
-        radial-gradient(
-            ellipse at 40% 55%,
-            rgba(255, 245, 242, 0.30),
-            transparent 50%
-        ),
-        radial-gradient(
-            ellipse at 85% 85%,
-            rgba(255, 202, 32, 0.13),
-            transparent 40%
-        );
-
-    opacity: 0.9;
-}
-
-/* スマホ */
-@media (max-width: 800px) {
-    .concept-inner {
-        padding: 80px 20px 70px;
+/* 動きを控えたい環境ではInstagram案内の点滅を停止 */
+@media (prefers-reduced-motion: reduce) {
+    .news-instagram-banner {
+        animation: none;
     }
-}
-
-/* =========================
-   SERVICE 薄い水彩風背景
-========================= */
-
-.service {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background-color: #F6D4CC;
-}
-
-/* 薄い水彩の色ムラ */
-.service::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            ellipse at 15% 20%,
-            rgba(255, 245, 242, 0.30),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at 80% 15%,
-            rgba(249, 176, 158, 0.16),
-            transparent 40%
-        ),
-        radial-gradient(
-            ellipse at 45% 65%,
-            rgba(255, 245, 242, 0.22),
-            transparent 50%
-        ),
-        radial-gradient(
-            ellipse at 90% 85%,
-            rgba(255, 202, 32, 0.08),
-            transparent 40%
-        );
-
-    opacity: 0.65;
 }
