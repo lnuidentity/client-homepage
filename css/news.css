@@ -1,5 +1,146 @@
 
 /* ==========================
+   お問い合わせページ
+========================== */
+
+.contact-message {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 70px 0 120px;
+}
+
+/* 案内文 */
+
+.contact-intro {
+    margin: 40px auto 50px;
+    text-align: center;
+    line-height: 2.2;
+    color: #633F35;
+}
+
+.contact-intro p {
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   お問い合わせ先
+========================== */
+
+.contact-info {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border: 1.5px solid #EBCFC5;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+.contact-info-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #633F35;
+}
+
+.contact-label {
+    flex-shrink: 0;
+    width: 85px;
+    font-weight: 500;
+}
+
+.contact-detail {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-detail p {
+    margin: 0 0 10px;
+}
+
+.contact-detail p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-detail p span {
+    display: inline-block;
+    min-width: 100px;
+}
+
+/* 電話番号 */
+
+.contact-detail a[href^="tel:"] {
+    display: inline-block;
+    color: #D1806C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* メール */
+
+.contact-detail a[href^="mailto:"] {
+    color: #D1806C;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-detail a:hover {
+    opacity: 0.75;
+}
+
+/* ==========================
+   スマホ対応
+========================== */
+
+@media (max-width: 768px) {
+
+    .contact-message {
+        padding: 50px 0 80px;
+    }
+
+    .contact-intro {
+        text-align: left;
+        margin: 30px auto 40px;
+    }
+
+    .contact-info {
+        padding: 25px 18px;
+    }
+
+    .contact-info-inner {
+        gap: 20px;
+    }
+
+    .contact-row {
+        font-size: 14px;
+    }
+
+    .contact-label {
+        width: 65px;
+    }
+
+    .contact-detail p span {
+        min-width: 75px;
+    }
+
+    .contact-detail a[href^="tel:"] {
+        font-size: 20px;
+    }
+}
+
+/* ==========================
    NEWS 一覧ページ
 ========================== */
 
@@ -53,7 +194,10 @@
     max-width: 686px;
     width: 90%;
     margin: 0 auto 60px;
+    padding: 50px 0 20px;
+    text-align: center;
 }
+
 
 .news-instagram a {
     display: flex;
@@ -98,6 +242,10 @@
 .news-list {
     width: 100%;
     border-top: 1px solid #EFC6B9;
+
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .news-item {
@@ -211,13 +359,14 @@
     .news-instagram {
         width: 100%;
         margin-bottom: 40px;
-    }
+            }
 
     .news-instagram a {
         min-height: 50px;
         gap: 10px;
         font-size: 14px;
         padding: 10px;
+
     }
 
     .instagram-icon {

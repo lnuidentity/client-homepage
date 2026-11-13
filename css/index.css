@@ -92,6 +92,15 @@ html {
   margin-bottom: 55px;
 }
 
+  .conceptmessage {
+        max-width: 1000px;
+    width: 90%;
+    margin: 50px auto 0;
+    font-size: 19px;
+    line-height: 2;
+    text-align: center;
+  }
+
 .link-button-area {
   text-align: center;
   margin-top: 10px;
