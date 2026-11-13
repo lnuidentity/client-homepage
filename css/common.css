@@ -797,3 +797,48 @@ width: 60px;
 
 }
 
+/* =========================
+   TOPへ戻るボタン
+========================= */
+
+.page-top {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 70px;
+    background-color: #FFF5F2;
+}
+
+.page-top a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 190px;
+    padding: 15px 35px;
+    background-color: #F9E5DF;
+    color: #633F35;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.page-top a:hover {
+    background-color: #F6D4CC;
+    transform: translateY(-3px);
+}
+
+/* スマートフォン */
+@media (max-width: 768px) {
+
+    .page-top {
+        padding: 40px 0 50px;
+    }
+
+    .page-top a {
+        min-width: 160px;
+        padding: 13px 28px;
+        font-size: 13px;
+    }
+}

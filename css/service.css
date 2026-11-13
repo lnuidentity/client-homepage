@@ -81,7 +81,7 @@
     align-items: flex-start;
     gap: 55px;
     padding: 70px 20px;
-    border-bottom: 1px solid #EAD8D2;
+    
 }
 
 /* 左側イラスト */
@@ -259,7 +259,7 @@
 .service-contact-heading span {
     display: inline;
     margin: 0;
-    font-size: 11px;
+    font-size: 15px;
     color: #947D74;
 }
 
@@ -413,4 +413,69 @@
 .about-hero-title.fade-in.show {
     opacity: 1;
     transform: translate(-50%, -50%);
+}
+
+/* SERVICE 本文の横幅統一 */
+@media (max-width: 800px) {
+
+    .service-page {
+        width: 90%;
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .service-intro {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+}
+
+/* サービスごとの背景色 */
+
+.service-list > li {
+    position: relative;
+    isolation: isolate;
+}
+
+
+
+/* =========================
+   サービスごとの背景色
+========================= */
+
+.service-detail {
+    position: relative;
+    isolation: isolate;
+}
+
+/* 1つ目・3つ目：ピンク */
+.service-detail:nth-of-type(odd)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+}
+
+/* 2つ目：薄いピンク */
+.service-detail:nth-of-type(even)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: #FFF5F2;
 }
