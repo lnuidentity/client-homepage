@@ -391,61 +391,6 @@
 
 
 /* =========================
-   フェードインアニメーション
-========================= */
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.8s ease, transform 1.8s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ページ上部のタイトル専用 */
-.about-hero-title.fade-in {
-    transform: translate(-50%, calc(-50% + 30px));
-}
-
-.about-hero-title.fade-in.show {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-}
-
-/* SERVICE 本文の横幅統一 */
-@media (max-width: 800px) {
-
-    .service-page {
-        width: 90%;
-        max-width: none;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-    }
-
-    .service-intro {
-        width: 100%;
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-        box-sizing: border-box;
-    }
-
-}
-
-/* サービスごとの背景色 */
-
-.service-list > li {
-    position: relative;
-    isolation: isolate;
-}
-
-
-
-/* =========================
    サービスごとの背景色
 ========================= */
 
