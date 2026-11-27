@@ -158,3 +158,20 @@
     box-sizing: border-box;
   }
 }
+
+/* Mobile: keep the message column consistent with other pages. */
+@media (max-width: 800px) {
+  .recruit-message {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .recruit-message-text {
+    width: 80vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}

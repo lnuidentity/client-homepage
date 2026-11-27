@@ -391,3 +391,20 @@
     box-sizing: border-box;
   }
 }
+
+/* Mobile: use the same readable content width as the reference page. */
+@media (max-width: 800px) {
+  .news-archive {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .news-list {
+    width: 80vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}

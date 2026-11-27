@@ -860,3 +860,14 @@ html {
     box-sizing: border-box;
   }
 }
+
+/* Mobile: keep the concept introduction at the reference width. */
+@media (max-width: 800px) {
+  .conceptmessage {
+    width: 80vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}

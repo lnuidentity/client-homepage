@@ -403,3 +403,26 @@
     line-height: 2.0;
   }
 }
+
+/* Mobile: same text-column width for the intro and service descriptions. */
+@media (max-width: 800px) {
+  .service-page {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .service-intro,
+  .service-detail-content {
+    width: 80vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .service-detail {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

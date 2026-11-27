@@ -159,3 +159,20 @@
     box-sizing: border-box;
   }
 }
+
+/* Mobile: prevent the intro from becoming 80% of an already narrowed parent. */
+@media (max-width: 800px) {
+  .contact-message {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .contact-intro {
+    width: 80vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
