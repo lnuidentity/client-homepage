@@ -774,3 +774,76 @@ html {
         animation: none;
     }
 }
+
+
+/* =========================
+   2026-11 mobile/readability refinements
+========================= */
+
+/* NEWS title matches the archive page more closely */
+.news-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* Readable "view all news" action */
+.news-more a {
+    font-size: 16px;
+    font-weight: 700;
+    min-height: 48px;
+    box-sizing: border-box;
+}
+
+/* Larger mobile service illustrations with more breathing room */
+@media (max-width: 767px) {
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .service-card img {
+        max-width: 250px;
+        margin: 20px auto 18px;
+    }
+
+    .service-list dd {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .news-title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .news-item time {
+        font-size: 14px;
+    }
+
+    .news-category {
+        font-size: 13px;
+    }
+
+    .section-en {
+        font-size: 14px;
+    }
+
+    .news-more a {
+        font-size: 16px;
+    }
+}
+
+.section-en {
+    color: #A65E51;
+}
+
+.concept h1,
+.service h1,
+.news-heading h1 {
+    font-weight: 600;
+}
+
+.first-view-text h1,
+.first-view-text h2 {
+    font-weight: 500;
+}

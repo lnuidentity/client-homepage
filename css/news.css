@@ -339,3 +339,42 @@
     }
 
 }
+
+
+/* Archive page: readable article titles and shared subtitle color */
+.news-heading-en {
+    color: #A65E51;
+}
+
+.news-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.news-instagram a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .news-heading-en {
+        font-size: 16px;
+    }
+
+    .news-text {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .news-category {
+        font-size: 13px;
+    }
+
+    .news-date {
+        font-size: 15px;
+    }
+
+    .news-instagram a {
+        font-size: 15px;
+    }
+}

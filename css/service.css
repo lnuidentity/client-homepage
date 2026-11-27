@@ -340,3 +340,27 @@
     font-size: 20px;
   }
 }
+
+
+/* Readability refinements */
+.service-description {
+  font-size: 16px;
+}
+
+.service-support p {
+  font-size: 16px;
+}
+
+.service-info > div {
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .service-description {
+    font-size: 16px;
+  }
+
+  .service-info > div {
+    font-size: 15px;
+  }
+}

@@ -136,3 +136,12 @@
     font-size: 13px;
   }
 }
+
+
+/* Readable body copy on mobile */
+@media (max-width: 768px) {
+    .recruit-message-text,
+    .recruit-link p {
+        font-size: 16px;
+    }
+}

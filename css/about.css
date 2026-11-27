@@ -135,3 +135,25 @@
     padding-top: 5px;
   }
 }
+
+
+/* Mobile body text: readable at a comfortable size */
+@media (max-width: 800px) {
+  .about-message-text {
+    font-size: 16px;
+    line-height: 2.1;
+  }
+
+  .company-table th,
+  .company-table td {
+    font-size: 16px;
+  }
+
+  .section-en {
+    color: #A65E51;
+  }
+}
+
+.section-en {
+  color: #A65E51;
+}
