@@ -364,3 +364,53 @@
     font-size: 15px;
   }
 }
+
+
+
+/* サービス紹介の本文 */
+.service-intro,
+.service-description,
+.service-support p,
+.service-info > div {
+  font-size: 17px;
+}
+@media (max-width: 800px) {
+  .service-intro,
+  .service-description,
+  .service-support p,
+  .service-info > div {
+    font-size: 18px;
+  }
+}
+
+
+
+/* モバイル：サービスページの本文幅をTOPの紹介エリアに合わせる */
+@media (max-width: 800px) {
+  .service-page {
+    width: min(90%, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
+
+
+
+/* 修正：サービスページ全体の本文幅を参考画像に合わせて約80%に */
+@media (max-width: 800px) {
+  .service-page {
+    width: 80% !important;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+  .service-intro,
+  .service-detail-content {
+    width: 100%;
+    max-width: none;
+  }
+}

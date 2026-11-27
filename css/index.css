@@ -847,3 +847,40 @@ html {
 .first-view-text h2 {
     font-weight: 500;
 }
+
+
+/* 2026-11: TOP「私たちについて」背景の幅を修正
+   背景レイヤーは画面幅いっぱい、文章だけを内側に */
+@media screen and (max-width: 767px) {
+  .concept {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .concept .concept-inner,
+  .concept .concept-inner.watercolor-bg {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background-color: #F9B09E;
+  }
+
+  .concept .concept-inner::before {
+    inset: 0;
+  }
+
+  .concept .conceptmessage {
+    width: 80% !important;
+    max-width: none !important;
+    margin: 50px auto 0 !important;
+    text-align: left !important;
+    box-sizing: border-box;
+  }
+}
