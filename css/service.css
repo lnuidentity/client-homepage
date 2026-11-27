@@ -399,12 +399,48 @@
 
 @media (max-width: 800px) {
   .service-intro {
-    font-size: 18px;
-    line-height: 2.0;
+    font-size: 20x;
+    line-height: 1.5;
   }
 }
 
 /* Mobile: same text-column width for the intro and service descriptions. */
+@media (max-width: 800px) {
+  .service-page {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .service-intro,
+  .service-detail-content {
+    width: 80vw;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .service-detail {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* サービスページ：導入文 */
+.service-intro {
+  font-size: 20px;
+  line-height: 2.1;
+}
+
+@media (max-width: 800px) {
+  .service-intro {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+}
+
+/* スマホ：文章の左右幅を統一 */
 @media (max-width: 800px) {
   .service-page {
     width: 100%;
