@@ -170,7 +170,7 @@ html {
 }
 
 .link-button:hover {
-    background-color: #DC7157;
+    background-color: var(--color-main-hover);
 }
 
 
@@ -274,7 +274,7 @@ html {
     padding: 5px 12px;
 
     border-radius: 20px;
-    background-color: #FFF5F2;
+      background-color: #f9e7e0;
     color: #633F35;
     font-size: 12px;
     font-weight: 700;
@@ -290,7 +290,7 @@ html {
 }
 
 .badge-dot {
-    background-color: #D1826D;
+    background-color: #D1806C;
 }
 
 .badge-dot2 {
@@ -307,7 +307,7 @@ html {
 
     border: 1px solid #F9B09E;
     border-radius: 20px;
-    background-color: #F8DED8;
+    background-color: #FFF5F2;
 }
 
 /* カード内の説明文 */
@@ -339,9 +339,12 @@ html {
 }
 
 .service-more a:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--color-sub-hover);
 }
 
+.service-card img {
+  border-radius: 15px;
+}
 /* 説明文の下線 */
 .underline-text {
     line-height: 1.9;
@@ -435,7 +438,7 @@ html {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 20px;
-    background-color: #F9B09E;
+    background-color:  #F6D4CC;
 
     color: #633F35;
     font-size: 12px;
@@ -474,7 +477,7 @@ html {
     min-width: 240px;
     padding: 17px 30px;
     border-radius: 30px;
-    background-color: #F9B09E;
+    background-color:  #F6D4CC;
 
     color: #633F35;
     font-size: 15px;
@@ -483,7 +486,7 @@ html {
 }
 
 .news-more a:hover {
-    background-color: #F6D4CC;
+    background-color: var(--color-sub-hover);
     color: #633F35;
 }
 
@@ -506,7 +509,7 @@ html {
     box-sizing: border-box;
 
     border-radius: 30px;
-    background-color: #F9E5DE;
+    background-color: #F9E5DF;
 
     color: #633F35;
     font-size: 14px;
@@ -529,7 +532,7 @@ html {
 @keyframes instagram-bg-blink {
     0%,
     100% {
-        background-color: #F9E5DE;
+        background-color: #F9E5DF;
     }
 
     50% {

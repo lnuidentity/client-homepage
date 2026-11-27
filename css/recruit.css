@@ -37,15 +37,15 @@
     gap: 15px;
     padding: 18px 35px;
     background: #633F35;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.3s;
+    transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 .recruit-button:hover {
-    opacity: 0.8;
+    background-color: var(--color-main-hover);
 }
 
 @media (max-width: 768px) {
@@ -67,4 +67,72 @@
         box-sizing: border-box;
         padding: 16px 15px;
     }
+}
+
+
+/* =========================
+   求人ページ：電話お問い合わせ
+========================= */
+.recruit-phone-contact {
+  max-width: 700px;
+  margin: 45px auto 0;
+  padding: 28px 22px;
+  border-radius: 22px;
+  background-color: #D1806C;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.recruit-phone-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.recruit-phone-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-size: clamp(25px, 5vw, 42px);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.recruit-phone-number:hover {
+  color: #633F35;
+}
+
+.recruit-phone-number span {
+  color: #FFCA20;
+}
+
+.recruit-phone-hours {
+  max-width: 430px;
+  margin: 18px auto 0;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  color: #D1806C;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .recruit-phone-contact {
+    margin-top: 30px;
+    padding: 24px 15px;
+  }
+
+  .recruit-phone-title {
+    font-size: 16px;
+  }
+
+  .recruit-phone-hours {
+    font-size: 13px;
+  }
 }

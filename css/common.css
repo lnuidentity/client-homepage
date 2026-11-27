@@ -1,4 +1,14 @@
-@charset "utf-8";
+@charset "UTF-8";
+
+/* 共通カラー */
+:root {
+  --color-main: #D1806C;
+  --color-main-hover: #B96C58;
+  --color-sub: #F6D4CC;
+  --color-sub-hover: #EBCFC5;
+  --color-text: #633F35;
+  --color-white: #FFFFFF;
+}
 
 /* =========================
    基本設定
@@ -21,27 +31,44 @@ a {
   text-decoration: none;
 }
 
+
 body {
   background-color: #FFF5F2;
   color: #633F35;
+
+  /* 本文フォント */
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 400;
+
+  /* 読みやすさ */
   letter-spacing: 0.03em;
-  line-height: 1;
+  line-height: 1.8;
 }
 
 img {
   max-width: 100%;
 }
 
+
+/* 見出し */
 h1,
 h2,
 h3,
 h4 {
   font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
+/* 英字・数字 */
+.section-en,
+.about-hero-en,
+.menu-en,
+.footer-en,
+.service-number {
+  font-family: "Montserrat", sans-serif;
+}
 /* =========================
    ヘッダー：共通
 ========================= */
@@ -89,7 +116,7 @@ h4 {
 .header-site-menu .menu-en {
   display: block;
   margin-bottom: 10px;
-  color: #F07835;
+  color: #D1806C;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -149,7 +176,7 @@ h4 {
 
 .footer-en {
   margin-bottom: 10px;
-  color: #F07835;
+  color: #D1806C;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -252,15 +279,28 @@ h4 {
     white-space: nowrap;
   }
 
-  .header-action.recruit {
-    background-color: #F6D4CC;
-    color: #633F35;
-  }
+.header-action {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
 
+.header-action.recruit {
+  background-color: #F6D4CC;
+  color: #633F35;
+}
   .header-action.contact {
     background-color: #F9B09E;
     color: #633F35;
   }
+
+  
+.header-action.recruit:hover {
+  background-color: var(--color-sub-hover);
+}
+
+.header-action.contact:hover {
+  background-color: var(--color-main-hover);
+  color: var(--color-white);
+}
 
   .toggle-menu-button {
     display: none;
@@ -278,7 +318,7 @@ h4 {
     left: 0;
     width: 100%;
     height: 100px;
-    background-color: #fff;
+    background-color: #FFFFFF;
   }
 
   .header-inner {
@@ -314,7 +354,7 @@ h4 {
     padding: 5px;
     border: none;
     border-radius: 0 0 15px 15px;
-    color: #fff;
+    color: #FFFFFF;
     font-size: 11px;
     font-weight: 700;
     text-align: center;
@@ -339,7 +379,7 @@ h4 {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: #fff;
+    background-color: #FFFFFF;
     transition: transform 0.3s ease;
   }
 
@@ -375,7 +415,7 @@ h4 {
     left: 0;
     display: block;
     overflow-y: auto;
-    padding: 40px 16px 25px;
+    padding: 18px 16px 20px;
     background-color: #FFF5F2;
     opacity: 0;
     visibility: hidden;
@@ -390,10 +430,10 @@ h4 {
   }
 
   .header-site-menu .site-menu {
-    min-height: 100%;
-    padding: 25px 25px 30px;
+    min-height: 0;
+    padding: 18px 22px 20px;
     border-radius: 35px;
-    background-color: #fff;
+    background-color: #FFFFFF;
   }
 
   .header-site-menu .site-menu ul {
@@ -405,14 +445,14 @@ h4 {
 
   .header-site-menu .site-menu li {
     width: 100%;
-    border-bottom: 5px dotted #d1806c;
+    border-bottom: 4px dotted #d1806c;
     text-align: left;
   }
 
   .header-site-menu .site-menu a {
     display: flex;
     flex-direction: column;
-    padding: 15px 0;
+    padding: 9px 0;
     text-decoration: none;
   }
 
@@ -454,7 +494,7 @@ h4 {
   }
 
   .footer-sitemap a {
-    padding: 15px 0;
+    padding: 9px 0;
   }
 
   .footer-ja {
@@ -541,7 +581,7 @@ h4 {
 .about-hero-en {
   display: block;
   margin-bottom: 25px;
-  color: #F07835;
+  color: #D1806C;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -578,3 +618,124 @@ h4 {
   }
 }
 
+
+
+/* =========================
+   スマホメニュー内の電話お問い合わせ
+========================= */
+.mobile-menu-contact {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .mobile-menu-contact {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 640px;
+    margin: 16px auto 0;
+    padding: 18px 16px;
+    border-radius: 22px;
+    background-color: #D1806C;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .mobile-menu-contact-title {
+    margin: 0 0 8px;
+    font-size: clamp(15px, 4vw, 20px);
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .mobile-menu-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #FFFFFF;
+    font-size: clamp(20px, 5.5vw, 32px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .mobile-menu-phone:hover {
+    color: #633F35;
+  }
+
+  .mobile-menu-phone .phone-mark {
+    color: #FFCA20;
+    font-size: 0.9em;
+  }
+
+  .mobile-menu-phone-label {
+    margin: 0 0 7px;
+    color: #FFFFFF;
+    font-size: 12px;
+  }
+
+  .mobile-menu-phone-sub {
+    margin-top: 2px;
+    font-size: clamp(18px, 4.8vw, 26px);
+  }
+
+  .mobile-menu-hours {
+    margin: 10px 0 0;
+    padding: 8px 10px;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    color: #D1806C;
+    font-size: clamp(13px, 3.5vw, 16px);
+    font-weight: 700;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .header-site-menu {
+    padding-top: 12px;
+    padding-bottom: 14px;
+  }
+
+  .header-site-menu .site-menu {
+    padding: 14px 20px 16px;
+    border-radius: 28px;
+  }
+
+  .header-site-menu .site-menu a {
+    padding: 7px 0;
+  }
+
+  .mobile-menu-contact {
+    margin-top: 12px;
+    padding: 16px 12px;
+    border-radius: 18px;
+  }
+
+  .mobile-menu-contact-title {
+    font-size: 14px;
+  }
+
+  .mobile-menu-phone {
+    font-size: clamp(19px, 5.2vw, 25px);
+    gap: 7px;
+  }
+
+  .mobile-menu-phone-sub {
+    font-size: clamp(17px, 4.6vw, 22px);
+  }
+
+  .mobile-menu-phone-label {
+    margin-bottom: 5px;
+    font-size: 11px;
+  }
+
+  .mobile-menu-hours {
+    margin-top: 8px;
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+}

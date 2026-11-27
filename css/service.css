@@ -76,6 +76,8 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+    border-radius: 15px;
+
 }
 
 /* 右側文章 */
@@ -114,8 +116,8 @@
   margin-bottom: 25px;
   padding: 5px 14px;
   border-radius: 30px;
-  background-color: #FFF0E9;
-  color: #D1806C;
+  background-color: #f9e7e0;
+  color:  #633F35;;
   font-size: 12px;
   font-weight: 700;
 }
