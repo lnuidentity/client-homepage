@@ -367,73 +367,39 @@
 
 
 
-/* サービス紹介の本文 */
-.service-intro,
-.service-description,
-.service-support p,
-.service-info > div {
-  font-size: 17px;
-}
-@media (max-width: 800px) {
-  .service-intro,
-  .service-description,
-  .service-support p,
-  .service-info > div {
-    font-size: 18px;
-  }
-}
-
-
-
-/* モバイル：サービスページの本文幅をTOPの紹介エリアに合わせる */
+/* Mobile: use a centered 80% text column; keep section/background full width */
 @media (max-width: 800px) {
   .service-page {
-    width: min(90%, calc(100% - 40px));
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-  }
-}
-
-
-
-/* 修正：サービスページ全体の本文幅を参考画像に合わせて約80%に */
-@media (max-width: 800px) {
-  .service-page {
-    width: 80% !important;
-    max-width: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
-  }
-  .service-intro,
-  .service-detail-content {
     width: 100%;
     max-width: none;
+    box-sizing: border-box;
+  }
+
+  .service-intro,
+  .service-detail-content {
+    width: 80%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .service-detail {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 
-/* サービスページ冒頭の紹介文：中央揃え＋読みやすい文字サイズ */
+/* Service page intro text: restore readable size on mobile */
 .service-intro {
-  max-width: 900px;
-  width: 90%;
-  margin: 0 auto 80px;
-  text-align: center;
   font-size: 20px;
-  line-height: 2;
-  box-sizing: border-box;
+  line-height: 2.1;
 }
 
 @media (max-width: 800px) {
   .service-intro {
-    width: 100%;
-    margin: 0 auto 45px;
-    padding: 0;
-    text-align: center;
     font-size: 18px;
-    line-height: 2;
+    line-height: 2.0;
   }
 }

@@ -149,41 +149,13 @@
 
 
 
-/* お問い合わせ案内・連絡先本文 */
-.contact-intro,
-.contact-row {
-  font-size: 17px;
-}
-@media (max-width: 768px) {
-  .contact-intro,
-  .contact-row {
-    font-size: 18px;
-  }
-}
-
-
-
-/* モバイル：お問い合わせページの左右余白を統一 */
-@media (max-width: 768px) {
-  .contact-message {
-    width: min(90%, calc(100% - 40px));
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-  }
-}
-
-
-
-/* 修正：お問い合わせページの本文幅を参考画像に合わせて約80%に */
-@media (max-width: 768px) {
-  .contact-message {
-    width: 80% !important;
+/* Mobile: center contact introduction with balanced side margins */
+@media (max-width: 800px) {
+  .contact-intro {
+    width: 80%;
     max-width: none;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
     box-sizing: border-box;
   }
 }
